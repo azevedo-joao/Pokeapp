@@ -8,25 +8,31 @@
 import SwiftUI
 
 struct DetailView: View {
-    let id: Int
-    let pokemonName: String
-    let imageURL: String
+    
+    let pokemon: Pokemon
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: imageURL), scale: 0.5)
+            AsyncImage(url: URL(string: pokemon.sprite), scale: 0.5)
             
-            HStack {
-                Text("Dex Nr. \(id)")
-                Text(pokemonName)
+            VStack {
+                HStack {
+                    Text("Dex Nr.: \(pokemon.id) –")
+                    Text(pokemon.name)
+                }
+                .padding(.bottom)
+                
+                Text("Type: \(pokemon.type)")
             }
         }
-        
+        .padding(.all)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(id: 1, pokemonName: "Bulbasaur", imageURL: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
+        let pokemon = Pokemon(id: 1, name: "Bulbasaur", type: "grass",
+                              sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
+        DetailView(pokemon: pokemon)
     }
 }

@@ -8,19 +8,38 @@
 import Foundation
 
 struct Pokedex: Decodable {
+    
     let entries: [Entry]
 }
 
 struct Entry: Decodable, Identifiable {
+    
     let id: Int
     
     var title: String {
         return name
     }
+    
     let name: String
     let sprites: Sprites
+    let types: [Types]
 }
 
 struct Sprites: Decodable {
-    let front_default: String
+    
+    enum CodingKeys: String, CodingKey {
+        case frontDefault = "front_default"
+    }
+    
+    let frontDefault: String
+}
+
+struct Types: Decodable {
+    
+    let type: Name
+}
+
+struct Name: Decodable {
+    
+    let name: String
 }

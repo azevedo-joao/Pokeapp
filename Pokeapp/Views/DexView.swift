@@ -12,17 +12,24 @@ struct DexView: View {
     @ObservedObject var networkManager = NetworkManager()
     
     var body: some View {
+        
         NavigationView {
+            
             List(networkManager.getSortedEntries()) { entry in
-                NavigationLink(destination: DetailView(id: entry.id, pokemonName: entry.title, imageURL: entry.sprites.front_default)) {
+                
+                let pokemon = Pokemon(id: entry.id,
+                                      name: entry.title,
+                                      type: entry.types[0].type.name,
+                                      sprite: entry.sprites.frontDefault)
+                
+                NavigationLink(destination: DetailView(pokemon: pokemon)) {
+                    
                     HStack {
                         Text(String(entry.id))
                             .padding(.trailing)
                         Text(entry.title)
                     }
                 }
-                
-                
             }
             .navigationTitle("Pokédex")
         }
