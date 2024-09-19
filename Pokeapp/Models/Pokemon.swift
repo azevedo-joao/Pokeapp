@@ -25,3 +25,9 @@ struct Pokemon {
         self.color = UIColor(.white)
     }
 }
+
+struct MockPokemon {
+	
+	static let sample = Pokemon(id: 1, name: "Bulbasaur", type: "grass",
+								sprite: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
+}

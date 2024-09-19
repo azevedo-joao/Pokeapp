@@ -43,3 +43,11 @@ struct Name: Decodable {
     
     let name: String
 }
+
+struct MockEntry {
+	
+	static let sample = Entry(id: 1,
+							  name: "bulbasaur",
+							  sprites: Sprites(frontDefault: ""),
+							  types: [Types(type: Name(name: "grass"))])
+}

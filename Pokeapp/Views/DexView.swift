@@ -9,33 +9,24 @@ import SwiftUI
 
 struct DexView: View {
     
-    @ObservedObject var networkManager = NetworkManager()
+	@StateObject private var viewModel = DexViewModel()
     
     var body: some View {
         
-        NavigationView {
+		NavigationStack {
             
-            List(networkManager.getSortedEntries()) { entry in
+			List(viewModel.entries) { entry in
                 
-                let pokemon = Pokemon(id: entry.id,
-                                      name: entry.title,
-                                      type: entry.types[0].type.name,
-                                      sprite: entry.sprites.frontDefault)
-                
-                NavigationLink(destination: DetailView(pokemon: pokemon)) {
+				NavigationLink(destination: DetailView(entry: entry)) {
                     
-                    HStack {
-                        Text(String(entry.id))
-                            .padding(.trailing)
-                        Text(entry.title)
-                    }
+					DexViewCell(entry: entry)
                 }
             }
             .navigationTitle("Pokédex")
         }
-        .onAppear {
-            self.networkManager.fetchData()
-        }
+		.task {
+			viewModel.getPokemonList()
+		}
     }
     
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkManager: ObservableObject {
+class NetworkManagerAlt: ObservableObject {
     
     @Published var entries = [Entry]()
     

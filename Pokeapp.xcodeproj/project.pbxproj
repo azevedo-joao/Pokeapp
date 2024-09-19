@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082AFC932C9C9FD9005E6DB6 /* DexViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082AFC922C9C9FD2005E6DB6 /* DexViewCell.swift */; };
 		083AC59029D04B8000E23C3F /* PokeappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083AC58F29D04B8000E23C3F /* PokeappApp.swift */; };
 		083AC59229D04B8000E23C3F /* DexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083AC59129D04B8000E23C3F /* DexView.swift */; };
 		083AC59429D04B8100E23C3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083AC59329D04B8100E23C3F /* Assets.xcassets */; };
 		083AC59729D04B8100E23C3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083AC59629D04B8100E23C3F /* Preview Assets.xcassets */; };
 		083AC59F29D051FB00E23C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083AC59E29D051FB00E23C3F /* LaunchScreen.storyboard */; };
 		083AC5A329D0756500E23C3F /* EntryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083AC5A229D0756500E23C3F /* EntryData.swift */; };
-		083AC5A529D0790700E23C3F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083AC5A429D0790700E23C3F /* NetworkManager.swift */; };
+		083AC5A529D0790700E23C3F /* NetworkManagerAlt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083AC5A429D0790700E23C3F /* NetworkManagerAlt.swift */; };
 		083AC5A729D0BD9400E23C3F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083AC5A629D0BD9400E23C3F /* DetailView.swift */; };
 		08F5CDB429E1E4CE00761B25 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5CDB329E1E4CE00761B25 /* Pokemon.swift */; };
+		08FF8FD92C9C5452001E674A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF8FD82C9C544D001E674A /* NetworkManager.swift */; };
+		08FF8FDB2C9C5DD1001E674A /* DexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF8FDA2C9C5DCD001E674A /* DexViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		082AFC922C9C9FD2005E6DB6 /* DexViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexViewCell.swift; sourceTree = "<group>"; };
 		083AC58C29D04B8000E23C3F /* Pokeapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokeapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		083AC58F29D04B8000E23C3F /* PokeappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeappApp.swift; sourceTree = "<group>"; };
 		083AC59129D04B8000E23C3F /* DexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexView.swift; sourceTree = "<group>"; };
@@ -27,9 +31,11 @@
 		083AC59D29D04C7B00E23C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		083AC59E29D051FB00E23C3F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		083AC5A229D0756500E23C3F /* EntryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryData.swift; sourceTree = "<group>"; };
-		083AC5A429D0790700E23C3F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		083AC5A429D0790700E23C3F /* NetworkManagerAlt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerAlt.swift; sourceTree = "<group>"; };
 		083AC5A629D0BD9400E23C3F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		08F5CDB329E1E4CE00761B25 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		08FF8FD82C9C544D001E674A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		08FF8FDA2C9C5DCD001E674A /* DexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		083AC58E29D04B8000E23C3F /* Pokeapp */ = {
 			isa = PBXGroup;
 			children = (
+				08FF8FD52C9C541A001E674A /* Manager */,
 				083AC5A129D0754A00E23C3F /* Models */,
 				083AC5A029D074DE00E23C3F /* Views */,
 				083AC58F29D04B8000E23C3F /* PokeappApp.swift */,
@@ -84,6 +91,8 @@
 		083AC5A029D074DE00E23C3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				082AFC922C9C9FD2005E6DB6 /* DexViewCell.swift */,
+				08FF8FDA2C9C5DCD001E674A /* DexViewModel.swift */,
 				083AC59129D04B8000E23C3F /* DexView.swift */,
 				083AC5A629D0BD9400E23C3F /* DetailView.swift */,
 			);
@@ -94,10 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				083AC5A229D0756500E23C3F /* EntryData.swift */,
-				083AC5A429D0790700E23C3F /* NetworkManager.swift */,
+				083AC5A429D0790700E23C3F /* NetworkManagerAlt.swift */,
 				08F5CDB329E1E4CE00761B25 /* Pokemon.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		08FF8FD52C9C541A001E674A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				08FF8FD82C9C544D001E674A /* NetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +145,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					083AC58B29D04B8000E23C3F = {
 						CreatedOnToolsVersion = 14.2;
@@ -171,9 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				083AC5A529D0790700E23C3F /* NetworkManager.swift in Sources */,
+				083AC5A529D0790700E23C3F /* NetworkManagerAlt.swift in Sources */,
+				082AFC932C9C9FD9005E6DB6 /* DexViewCell.swift in Sources */,
 				083AC59229D04B8000E23C3F /* DexView.swift in Sources */,
+				08FF8FDB2C9C5DD1001E674A /* DexViewModel.swift in Sources */,
 				083AC5A329D0756500E23C3F /* EntryData.swift in Sources */,
+				08FF8FD92C9C5452001E674A /* NetworkManager.swift in Sources */,
 				083AC5A729D0BD9400E23C3F /* DetailView.swift in Sources */,
 				083AC59029D04B8000E23C3F /* PokeappApp.swift in Sources */,
 				08F5CDB429E1E4CE00761B25 /* Pokemon.swift in Sources */,
@@ -219,6 +239,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -279,6 +300,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -313,6 +335,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +365,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
